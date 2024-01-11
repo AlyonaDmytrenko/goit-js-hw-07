@@ -1,7 +1,10 @@
+let nameInput = document.getElementById('name-input');
+let nameOutput = document.getElementById('name-output');
+
 function updateGreeting() {
-  var inputValue = document.getElementById('name-input').value.trim();
+  let inputValue = nameInput.value.trim();
 
-  var outputSpan = document.getElementById('name-output');
-
-  outputSpan.textContent = inputValue === '' ? 'Anonymous' : inputValue;
+  nameOutput.textContent = inputValue === '' ? 'Anonymous' : inputValue;
 }
+
+nameInput.addEventListener('input', updateGreeting);
